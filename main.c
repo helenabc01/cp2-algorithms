@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <string.h>
+
+#define MAX_SIZE 50
+#define MAX_SUB_SIZE 20
 
 // Helena Barbosa Costa RM562450
 
@@ -15,7 +19,7 @@ int fatoriais(int n){
 
     // Declarando varialvel que vai armazenar o resultado final do fatorial
     int resFatorial = 1;
-    
+
     // For para passar pelo vetor e multiplicar o valor atual pelo número na posiçaõ do vetor
     for (int i = 0; i < n; i++){
         resFatorial *= nFatoriais[i];
@@ -23,12 +27,32 @@ int fatoriais(int n){
 
     printf("Fatorial de %d é %d\n", n, resFatorial);
     return resFatorial;
- 
+
 }
 
+int substring() {
+    char str1[MAX_SIZE];
+    char str2[MAX_SUB_SIZE];
+
+    printf("Digite a primeira string: ");
+    fgets(str1, MAX_SIZE, stdin);
+    str1[strcspn(str1, "\n")] = 0;
+
+    printf("Digite a segunda string: ");
+    fgets(str2, MAX_SUB_SIZE, stdin);
+    str2[strcspn(str2, "\n")] = 0;
+
+    if (strstr(str1, str2) != NULL) {
+        printf("A segunda string esta contida na primeira.\n");
+    } else {
+        printf("A segunda string NAO está contida na primeira.\n");
+    }
+
+
+}
 
 int main(){
-    
+
     int option;
     char con;
 
@@ -45,7 +69,7 @@ int main(){
         case  1:
             printf("Sequência Fibonacci");
             break;
-        
+
         case 2:
             // Declaração da variável que armazena o número para calcúlo do fatorial
             int n;
@@ -68,18 +92,18 @@ int main(){
         case 4:
             printf("Verificação de Substring");
             break;
-        
+
         default:
             break;
         }
 
         printf("\nDeseja continuar testando? (y/n): ");
         scanf (" %c", & con);
-        
+
     } while (con == 'y');
 
-    printf("\nPrograma encerrado, esperamos que tenha gostado!\n"); 
-    
+    printf("\nPrograma encerrado, esperamos que tenha gostado!\n");
+
     return 0;
 
 }
