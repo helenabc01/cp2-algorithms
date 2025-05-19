@@ -1,7 +1,15 @@
 #include <stdio.h>
+#include <string.h>
+
+#define MAX_SIZE 50
+#define MAX_SUB_SIZE 20
 
 // Helena Barbosa Costa RM562450
+<<<<<<< HEAD
 // Isabelle Dias Belini RM566464
+=======
+// Felipe Rodrigues Ribeiro dos Santos RM565274
+>>>>>>> main
 
 // 1 - Sequência Fibonacci
 int fibonacci(int n1){
@@ -31,6 +39,30 @@ int fatoriais(int n){
     printf("Fatorial de %d é %d\n", n, resFatorial);
     return resFatorial;
 
+<<<<<<< HEAD
+=======
+}
+
+int substring() {
+    char str1[MAX_SIZE];
+    char str2[MAX_SUB_SIZE];
+
+    printf("Digite a primeira string: ");
+    fgets(str1, MAX_SIZE, stdin);
+    str1[strcspn(str1, "\n")] = 0;
+
+    printf("Digite a segunda string: ");
+    fgets(str2, MAX_SUB_SIZE, stdin);
+    str2[strcspn(str2, "\n")] = 0;
+
+    if (strstr(str1, str2) != NULL) {
+        printf("A segunda string esta contida na primeira.\n");
+    } else {
+        printf("A segunda string NAO está contida na primeira.\n");
+    }
+
+    return 0;
+>>>>>>> main
 }
 
 
@@ -46,6 +78,7 @@ int main(){
         printf("3 - Verificação de Pelíndromo\n");
         printf("4 - Verificação de Substring\n");
         scanf ("%d", & option);
+        getchar();
 
         switch (option)
         {
@@ -77,7 +110,8 @@ int main(){
             printf("Verificação de Pelíndromo");
             break;
         case 4:
-            printf("Verificação de Substring");
+            printf("Verificação de Substring\n");
+            substring();
             break;
 
         default:
