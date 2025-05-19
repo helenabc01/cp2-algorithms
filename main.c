@@ -48,8 +48,9 @@ int substring() {
         printf("A segunda string NAO está contida na primeira.\n");
     }
 
-
+    return 0;
 }
+
 
 int main(){
 
@@ -63,6 +64,7 @@ int main(){
         printf("3 - Verificação de Pelíndromo\n");
         printf("4 - Verificação de Substring\n");
         scanf ("%d", & option);
+        getchar();
 
         switch (option)
         {
@@ -90,7 +92,8 @@ int main(){
             printf("Verificação de Pelíndromo");
             break;
         case 4:
-            printf("Verificação de Substring");
+            printf("Verificação de Substring\n");
+            substring();
             break;
 
         default:
