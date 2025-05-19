@@ -4,8 +4,12 @@
 #define MAX_SIZE 50
 #define MAX_SUB_SIZE 20
 
+#define MAX_LENGTH 100
+#include <ctype.h>
+
 // Helena Barbosa Costa RM562450
 // Felipe Rodrigues Ribeiro dos Santos RM565274
+// Ryan Amorim De Castro Santana RM 564393
 
 int fatoriais(int n){
 
@@ -30,6 +34,21 @@ int fatoriais(int n){
     return resFatorial;
 
 }
+
+int eh_palindromo() {
+    char palavra[MAX_LENGTH];
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    int length = strlen(palavra);
+    for (int i = 0; i < length / 2; i++) {
+        if (tolower(palavra[i]) != tolower(palavra[length - 1 - i])) {
+            return 0; // Não é um palíndromo
+        }
+    }
+    return 1; // É um palíndromo
+}
+
 
 int substring() {
     char str1[MAX_SIZE];
@@ -90,7 +109,11 @@ int main(){
             break;
 
         case 3:
-            printf("Verificação de Pelíndromo");
+            if (eh_palindromo()) {
+                printf("A palavra, numero ou frase e um palíndromo.\n");
+            } else {
+                printf("A palavra, numero ou frase NAO e um palíndromo.\n");
+            }
             break;
         case 4:
             printf("Verificação de Substring\n");
