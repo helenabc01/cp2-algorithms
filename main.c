@@ -14,8 +14,24 @@
 
 
 // 1 - Função: Sequência Fibonacci
-int fibonacci(int n1){
+void fibonacci(int nF){
+    int n1[50];
+    int i;
 
+    n1[0] = 0;
+    if (nF > 1) n1[1] = 1;
+
+    // calculo
+    for (i = 2; i < nF; i++){
+        n1[i] = n1[i - 1] + n1[i - 2];
+    }
+
+    //imprime
+    for (i = 0; i < nF; i++) {
+            printf("%d ", n1[i]);
+        }
+
+    printf("\n");
 }
 
 // 2 - Função: Fatoriais
@@ -42,7 +58,7 @@ int fatoriais(int n){
     return resFatorial;
 }
 
-
+// 3 - Função: Verificar Palíndromo
 int eh_palindromo() {
     char palavra[MAX_LENGTH];
     printf("Digite uma palavra: ");
@@ -89,6 +105,7 @@ int main(){
 
     do{
         printf("Seja bem-vindo a CP02, qual exercicio gostaria de testar?\n");
+        printf("");
         printf("1 - Sequencia Fibonacci\n");
         printf("2 - Fatoriais\n");
         printf("3 - Verificacao de Palindromo\n");
@@ -100,10 +117,18 @@ int main(){
         {
         case  1:
             // declaração da variável que indica o número de posições do vetor
-            int n1;
-            printf("Voce selecionou: Sequencia Fibonacci");
+            int nF;
+            printf("Voce selecionou: Sequencia Fibonacci\n");
             printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50):\n");
-            scanf("%d", &n1);
+            scanf("%d", &nF);
+
+            while (nF < 1 || nF > 50) {
+                printf("Valor errado, tente novamente!\n");
+                scanf("%d", &nF);
+            }
+
+            //Chamando a função
+            fibonacci(nF);
             break;
 
         case 2:
@@ -111,11 +136,11 @@ int main(){
             int n;
             printf("Voce selecionou: Fatoriais\n");
             printf("Digite o numero voce deseja calcular seu fatorial (de 1 a 20)\n");
-            scanf(" %d", & n);
+            scanf(" %d", &n);
 
             // Limitação de números de 1 a 20
             while (n < 1 || n > 20) {
-                printf("Só aceitamos números entre 1 a 20! Tente novamente :)");
+                printf("So aceitamos numeros entre 1 a 20! Tente novamente :)\n");
                 scanf(" %d", & n);
             };
 
@@ -124,20 +149,21 @@ int main(){
             break;
 
         case 3:
+            printf("Voce selecionou: Verificacao de Palindromo\n");
             if (eh_palindromo()) {
-                printf("A palavra, numero ou frase e um palíndromo.\n");
+                printf("A palavra, numero ou frase e um palindromo.\n");
             } else {
-                printf("A palavra, numero ou frase NAO e um palíndromo.\n");
+                printf("A palavra, numero ou frase NAO e um palindromo.\n");
             }
-            printf("Verificacao de Palindromo");
-
             break;
+
         case 4:
             printf("Voce selecionou: Verificacao de Substring\n");
             substring();
             break;
 
         default:
+            printf("Opcao invalida. Por favor, selecione entre 1 e 4.\n");
             break;
         }
 
