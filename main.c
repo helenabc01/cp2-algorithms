@@ -5,18 +5,16 @@
 #define MAX_SUB_SIZE 20
 
 // Helena Barbosa Costa RM562450
-<<<<<<< HEAD
 // Isabelle Dias Belini RM566464
-=======
 // Felipe Rodrigues Ribeiro dos Santos RM565274
->>>>>>> main
 
-// 1 - Sequência Fibonacci
+
+// 1 - Função: Sequência Fibonacci
 int fibonacci(int n1){
 
 }
 
-// 2 - Fatoriais
+// 2 - Função: Fatoriais
 int fatoriais(int n){
 
     int nFatoriais[n];
@@ -36,13 +34,11 @@ int fatoriais(int n){
         resFatorial *= nFatoriais[i];
     }
 
-    printf("Fatorial de %d é %d\n", n, resFatorial);
+    printf("Fatorial de %d e %d\n", n, resFatorial);
     return resFatorial;
-
-<<<<<<< HEAD
-=======
 }
 
+// 4 - Função: Verificar Substring
 int substring() {
     char str1[MAX_SIZE];
     char str2[MAX_SUB_SIZE];
@@ -58,11 +54,10 @@ int substring() {
     if (strstr(str1, str2) != NULL) {
         printf("A segunda string esta contida na primeira.\n");
     } else {
-        printf("A segunda string NAO está contida na primeira.\n");
+        printf("A segunda string NAO esta contida na primeira.\n");
     }
 
     return 0;
->>>>>>> main
 }
 
 
@@ -72,11 +67,11 @@ int main(){
     char con;
 
     do{
-        printf("Seja bem-vindo à CP02, qual exercício gostaria de testar?\n");
-        printf("1 - Sequência Fibonacci\n");
+        printf("Seja bem-vindo a CP02, qual exercicio gostaria de testar?\n");
+        printf("1 - Sequencia Fibonacci\n");
         printf("2 - Fatoriais\n");
-        printf("3 - Verificação de Pelíndromo\n");
-        printf("4 - Verificação de Substring\n");
+        printf("3 - Verificacao de Palindromo\n");
+        printf("4 - Verificacao de Substring\n");
         scanf ("%d", & option);
         getchar();
 
@@ -85,15 +80,16 @@ int main(){
         case  1:
             // declaração da variável que indica o número de posições do vetor
             int n1;
-            printf("Você selecionou: Sequência Fibonacci");
-            printf("Digite a quantidade de termos da sequência de Fibonacci (1 a 50):\n");
+            printf("Voce selecionou: Sequencia Fibonacci");
+            printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50):\n");
             scanf("%d", &n1);
             break;
 
         case 2:
             // Declaração da variável que armazena o número para calcúlo do fatorial
             int n;
-            printf("Digite o número você deseja calcular seu fatorial (de 1 a 20)\n");
+            printf("Voce selecionou: Fatoriais\n");
+            printf("Digite o numero voce deseja calcular seu fatorial (de 1 a 20)\n");
             scanf(" %d", & n);
 
             // Limitação de números de 1 a 20
@@ -107,10 +103,10 @@ int main(){
             break;
 
         case 3:
-            printf("Verificação de Pelíndromo");
+            printf("Verificacao de Palindromo");
             break;
         case 4:
-            printf("Verificação de Substring\n");
+            printf("Voce selecionou: Verificacao de Substring\n");
             substring();
             break;
 
