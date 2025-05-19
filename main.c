@@ -5,6 +5,7 @@
 #define MAX_SUB_SIZE 20
 
 // Helena Barbosa Costa RM562450
+// Felipe Rodrigues Ribeiro dos Santos RM565274
 
 int fatoriais(int n){
 
