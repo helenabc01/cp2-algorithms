@@ -1,0 +1,37 @@
+# Arquivos compilados (C/C++)
+*.exe
+*.o
+*.obj
+*.out
+*.gch
+
+# Dependências
+*.d
+*.dep
+*.map
+
+# Arquivos temporários e backups
+*~
+*.tmp
+*.bak
+*.log
+*.swp
+*.swo
+
+# Diretórios comuns de build
+/build/
+/bin/
+/debug/
+/release/
+
+# Code::Blocks
+*.layout
+*.depend
+*.cbp.save
+
+# VS Code (caso use)
+.vscode/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
