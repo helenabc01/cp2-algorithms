@@ -13,7 +13,7 @@
 // Ryan Amorim De Castro Santana RM 564393
 
 
-// 1 - Função: Sequência Fibonacci
+// 1 - Função: Sequência Fibonacci - Isabelle Dias Belini
 void fibonacci(int nF){
     int n1[50];
     int i;
@@ -34,7 +34,7 @@ void fibonacci(int nF){
     printf("\n");
 }
 
-// 2 - Função: Fatoriais
+// 2 - Função: Fatoriais - Helena Barbosa Costa
 int fatoriais(int n){
 
     int nFatoriais[n];
@@ -58,7 +58,7 @@ int fatoriais(int n){
     return resFatorial;
 }
 
-// 3 - Função: Verificar Palíndromo
+// 3 - Função: Verificar Palíndromo - Ryan Amorim De Castro Santana
 int eh_palindromo() {
     char palavra[MAX_LENGTH];
     printf("Digite uma palavra: ");
@@ -75,7 +75,7 @@ int eh_palindromo() {
 
 
 
-// 4 - Função: Verificar Substring
+// 4 - Função: Verificar Substring - Felipe Rodrigues Ribeiro dos Santos
 int substring() {
     char str1[MAX_SIZE];
     char str2[MAX_SUB_SIZE];
