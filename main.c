@@ -1,7 +1,14 @@
 #include <stdio.h>
 
 // Helena Barbosa Costa RM562450
+// Isabelle Dias Belini RM566464
 
+// 1 - Sequência Fibonacci
+int fibonacci(int n1){
+
+}
+
+// 2 - Fatoriais
 int fatoriais(int n){
 
     int nFatoriais[n];
@@ -15,7 +22,7 @@ int fatoriais(int n){
 
     // Declarando varialvel que vai armazenar o resultado final do fatorial
     int resFatorial = 1;
-    
+
     // For para passar pelo vetor e multiplicar o valor atual pelo número na posiçaõ do vetor
     for (int i = 0; i < n; i++){
         resFatorial *= nFatoriais[i];
@@ -23,12 +30,12 @@ int fatoriais(int n){
 
     printf("Fatorial de %d é %d\n", n, resFatorial);
     return resFatorial;
- 
+
 }
 
 
 int main(){
-    
+
     int option;
     char con;
 
@@ -43,9 +50,13 @@ int main(){
         switch (option)
         {
         case  1:
-            printf("Sequência Fibonacci");
+            // declaração da variável que indica o número de posições do vetor
+            int n1;
+            printf("Você selecionou: Sequência Fibonacci");
+            printf("Digite a quantidade de termos da sequência de Fibonacci (1 a 50):\n");
+            scanf("%d", &n1);
             break;
-        
+
         case 2:
             // Declaração da variável que armazena o número para calcúlo do fatorial
             int n;
@@ -68,18 +79,18 @@ int main(){
         case 4:
             printf("Verificação de Substring");
             break;
-        
+
         default:
             break;
         }
 
         printf("\nDeseja continuar testando? (y/n): ");
         scanf (" %c", & con);
-        
+
     } while (con == 'y');
 
-    printf("\nPrograma encerrado, esperamos que tenha gostado!\n"); 
-    
+    printf("\nPrograma encerrado, esperamos que tenha gostado!\n");
+
     return 0;
 
 }
